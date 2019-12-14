@@ -1,0 +1,7 @@
+// Re-open Activity from backstack, make it to the top of task.
+
+fun createReuseIntent(context: Context): Intent {
+            return Intent(context, Data4GActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            }
+        }
